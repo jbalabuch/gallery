@@ -1,0 +1,19 @@
+<section>
+  <ul>
+    <li [class.active]="currentIndex === 0">
+      <img (click)="handleClick(0)" [src]="pictures[0]" alt="" class="thumb" />
+    </li>
+    <li [class.active]="currentIndex === 1">
+      <img (click)="handleClick(1)" [src]="pictures[1]" alt="" class="thumb" />
+    </li>
+    <li [class.active]="currentIndex === 2">
+      <img (click)="handleClick(2)" [src]="pictures[2]" alt="" class="thumb" />
+    </li>
+  </ul>
+
+  <span class="prev">
+    <</span> <span class="next">>
+  </span>
+
+  <img [src]="pictures[currentIndex]" class="preview" />
+</section>

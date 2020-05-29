@@ -1,0 +1,11 @@
+
+
+<label>Lokalizacja:</label>
+
+<input [(ngModel)]="location" />
+
+<button (click)="handleSearch()">Sprawdź</button>
+
+<div *ngIf="data">Temperatura: {{ calculate(data.main.temp) }}°C</div>
+<div *ngIf="data">Pogoda: {{ data.weather[0].description }}</div>
+<div *ngIf="data">Pogoda: {{ data.wind.speed }}</div>

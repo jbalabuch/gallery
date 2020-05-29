@@ -1,0 +1,14 @@
+<section>
+  <ul>
+    <li *ngFor="let picture of pictures; let i = index" [class.active]="currentIndex === i">
+
+      <img (click)="handleClick(i)" [src]="picture.src" [alt]="picture.alt" class="thumb" />
+    </li>
+  </ul>
+
+  <span [class.hide]="currentIndex === 0" (click)="handlePrev()" class="prev">
+    <</span> <span [class.hide]="currentIndex === pictures.length - 1" (click)="handleNext()" class="next">>
+  </span>
+
+  <img [src]="pictures[currentIndex].src" [alt]="pictures[currentIndex].alt" class="preview" />
+</section>
